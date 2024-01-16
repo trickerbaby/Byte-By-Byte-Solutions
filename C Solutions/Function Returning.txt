@@ -1,0 +1,14 @@
+### Function to Return Some Value
+
+#include <stdio.h>
+
+// Function to return a special value
+int returnSpecialValue() {
+    return 42; // The answer to life, the universe, and everything! 🌌
+}
+
+int main() {
+    // Call the function and reveal the mystery
+    printf("The special value is: %d\n", returnSpecialValue());
+    return 0;
+}

@@ -1,0 +1,37 @@
+### Check If the Number Is Even or Odd. If Odd, Print Its Factorial; If Even, Print the Sum of First N Numbers (User Input)
+
+
+#include <stdio.h>
+
+// Function to calculate the factorial of a number
+int calculateFactorial(int num) {
+    int fact = 1;
+	for(int i = 1;i<=num;i++)
+	{
+		fact=fact*i;
+	}
+	return fact;
+}
+
+// Function to check if the number is even or odd and perform actions accordingly
+void checkEvenOddPrintResult(int num) {
+    if (num % 2 != 0) {
+        // If odd, print its factorial
+        printf("%d is odd! Factorial: %lld\n", num, calculateFactorial(num));
+    } else {
+        // If even, print the sum of first N numbers
+        int sum = sumOfFirstNNumbers(num);
+        printf("%d is even! Sum of first %d numbers: %d\n", num, num, sum);
+    }
+}
+
+int main() {
+    // Get user input for a number
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Check even/odd and print the result with enthusiasm
+    checkEvenOddPrintResult(num);
+    return 0;
+}

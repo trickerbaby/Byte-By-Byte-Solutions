@@ -1,0 +1,23 @@
+### Find the Largest Element in an Array
+
+#include <stdio.h>
+
+// Function to find the largest element in an array
+int findLargestElement() {
+    int array[10] = {5, 8, 1, 3, 7, 2, 9, 4, 6, 10};
+    int largest = array[0];
+
+    for (int i = 1; i < 10; ++i) {
+        if (array[i] > largest) {
+            largest = array[i];
+        }
+    }
+
+    return largest;
+}
+
+int main() {
+    // Find and print the largest element in the array
+    printf("The largest element in the array is: %d\n", findLargestElement());
+    return 0;
+}

@@ -1,0 +1,25 @@
+### Sum All Factors of a Number and Print It (User Input)
+
+#include <stdio.h>
+
+// Function to calculate the sum of all factors of a number
+int sumAllFactors(int num) {
+    int sum = 0;
+    for (int i = 1; i <= num; ++i) {
+        if (num % i == 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+int main() {
+    // Get user input for a number
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Calculate and print the sum of factors
+    printf("Sum of factors of %d: %d\n", num, sumAllFactors(num));
+    return 0;
+}

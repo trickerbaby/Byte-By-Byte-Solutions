@@ -1,0 +1,35 @@
+### Check If a Number Is Prime (User Input)
+
+#include <stdio.h>
+#include <stdbool.h> //to use a 'bool' data type we have to import this 
+
+// Function to check if a number is prime
+bool isPrime(int num) {
+    if (num < 2) {
+        return false;
+    }
+
+    for (int i = 2; i * i <= num; ++i) { //loop till root(num) , Or i*i<=num
+        if (num % i == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+int main() {
+    // Get user input for a number
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Check and announce the prime status
+    if (isPrime(num)) {
+        printf("%d is a prime number! 🌟\n", num);
+    } else {
+        printf("%d is not a prime number. 😕\n", num);
+    }
+
+    return 0;
+}

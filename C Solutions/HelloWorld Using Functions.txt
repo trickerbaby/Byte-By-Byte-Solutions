@@ -1,0 +1,15 @@
+### Function to Print Some Message
+
+#include <stdio.h>
+
+// Function to print a fun message
+
+void printMessage() {
+    printf("Hello there! Enjoying programming in C? 🚀\n");
+}
+
+int main() {
+    // Call the function
+    printMessage();
+    return 0;
+}

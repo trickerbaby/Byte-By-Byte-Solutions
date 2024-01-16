@@ -1,0 +1,18 @@
+### Check If Given Number Is Even or Odd
+
+#include <stdio.h>
+
+// Function to check if a number is even or odd
+void checkEvenOrOdd(int num) {
+    if (num % 2 == 0) {
+        printf("%d is even! 😊\n", num);
+    } else {
+        printf("%d is odd! 😎\n", num);
+    }
+}
+
+int main() {
+    // Call the function and have some fun
+    checkEvenOrOdd(7);
+    return 0;
+}

@@ -1,0 +1,25 @@
+### Print Numbers Divisible by 5 and 3 from 1 to N (User Input)
+
+#include <stdio.h>
+
+// Function to print numbers divisible by 5 and 3 from 1 to N
+void printNumbersDivisibleBy5And3(int n) {
+    printf("Numbers divisible by 5 and 3 from 1 to %d: ", n);
+    for (int i = 1; i <= n; ++i) {
+        if (i % 5 == 0 && i % 3 == 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+}
+
+int main() {
+    // Get user input for N
+    int n;
+    printf("Enter a number (N): ");
+    scanf("%d", &n);
+
+    // Call the function and enjoy the sequence
+    printNumbersDivisibleBy5And3(n);
+    return 0;
+}

@@ -1,0 +1,23 @@
+### Calculate the Multiplication of Numbers from 1 to N (User Input)
+
+#include <stdio.h>
+
+// Function to calculate the multiplication of numbers from 1 to N
+  int multiplyNumbers1toN(int n) {
+    int result = 1;
+    for (int i = 1; i <= n; ++i) {
+        result *= i;
+    }
+    return result;
+}
+
+int main() {
+    // Get user input for N
+    int n;
+    printf("Enter a number (N): ");
+    scanf("%d", &n);
+
+    // Calculate and print the multiplication
+    printf("Multiplication of numbers from 1 to %d: %lld\n", n, multiplyNumbers1toN(n));
+    return 0;
+}

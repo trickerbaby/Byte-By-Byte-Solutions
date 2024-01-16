@@ -1,0 +1,25 @@
+### Print Square Root of a Number (User Input)
+
+#include <stdio.h>
+#include <math.h>
+
+// Function to calculate and print the square root of a number
+void printSquareRoot(int num) {
+    if (num < 0) {
+        printf("Cannot calculate square root of a negative number. 😕\n");
+    } else {
+        double result = sqrt(num);
+        printf("Square root of %d is: %lf\n", num, result);
+    }
+}
+
+int main() {
+    // Get user input for a number
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Print the square root with a sense of awe
+    printSquareRoot(num);
+    return 0;
+}

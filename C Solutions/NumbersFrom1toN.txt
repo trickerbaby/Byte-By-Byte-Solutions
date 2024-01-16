@@ -1,0 +1,22 @@
+### Print Numbers from 1 to N (User Input)
+
+#include <stdio.h>
+
+// Function to print numbers from 1 to N
+void printNumbers1toN(int n) {
+    for (int i = 1; i <= n; ++i) {
+        printf("%d ", i);
+    }
+    printf("\n");
+}
+
+int main() {
+    // Get user input for N
+    int n;
+    printf("Enter a number (N): ");
+    scanf("%d", &n);
+
+    // Call the function and enjoy the sequence
+    printNumbers1toN(n);
+    return 0;
+}

@@ -1,0 +1,22 @@
+### Print Numbers from A to B (User Input)
+
+#include <stdio.h>
+
+// Function to print numbers from A to B
+void printNumbersAtoB(int a, int b) {
+    for (int i = a; i <= b; ++i) {
+        printf("%d ", i);
+    }
+    printf("\n");
+}
+
+int main() {
+    // Get user input for A and B
+    int a, b;
+    printf("Enter two numbers (A and B): ");
+    scanf("%d %d", &a, &b);
+
+    // Call the function and enjoy the sequence
+    printNumbersAtoB(a, b);
+    return 0;
+}

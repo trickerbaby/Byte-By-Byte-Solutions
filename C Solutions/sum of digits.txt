@@ -1,0 +1,26 @@
+
+// Function to calculate and print the sum of digits of a number
+void printSumOfDigits(int num) {
+    int sum = 0;
+    int temp = num;
+
+    // Sum digits using a loop
+    while (temp != 0) {
+        sum += temp % 10;
+        temp /= 10;
+    }
+
+    printf("Sum of digits of %d is: %d\n", num, sum);
+}
+
+int main() {
+    // Get user input for a number
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Print the sum of digits with enthusiasm
+    printSumOfDigits(num);
+    return 0;
+}
+

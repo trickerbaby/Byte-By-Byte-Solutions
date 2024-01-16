@@ -1,0 +1,41 @@
+### Reverse Only the Words of a String (User Input)
+
+#include <stdio.h>
+#include <string.h>
+
+// Function to reverse only the words of a string
+void reverseWords(char str[]) {
+    int length = strlen(str);
+    int start = 0;
+
+    for (int i = 0; i <= length; ++i) {
+        if (str[i] == ' ' || str[i] == '\0') {
+            // Reverse the characters in the word
+            for (int j = i - 1; j >= start; --j) {
+                printf("%c", str[j]);
+            }
+
+            // Print the space after the reversed word
+            if (str[i] == ' ') {
+                printf(" ");
+            }
+
+            // Move the start index to the next word
+            start = i + 1;
+        }
+    }
+
+    printf("\n");
+}
+
+int main() {
+    // Get user input for a string
+    char str[100];
+    printf("Enter a string: ");
+    scanf(" %[^\n]s", str);
+
+    // Reverse only the words of the string
+    reverseWords(str);
+
+    return 0;
+}

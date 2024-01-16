@@ -1,0 +1,23 @@
+### Calculate the Sum of First N Numbers from 1 to N (User Input)
+
+#include <stdio.h>
+
+// Function to calculate the sum of first N numbers
+int sumOfFirstNNumbers(int n) {
+    int sum = 0;
+    for (int i = 1; i <= n; ++i) {
+        sum += i;
+    }
+    return sum;
+}
+
+int main() {
+    // Get user input for N
+    int n;
+    printf("Enter a number (N): ");
+    scanf("%d", &n);
+
+    // Calculate and print the sum
+    printf("Sum of first %d numbers: %d\n", n, sumOfFirstNNumbers(n));
+    return 0;
+}

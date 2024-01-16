@@ -1,0 +1,18 @@
+### Make an Array Containing Elements from 1 to 10
+
+
+#include <stdio.h>
+
+//to make an array containing elements from 1 to 10
+
+int main() {
+   
+   int array[10] = {1,2,3,4,5,6,7,8,9,10};
+   int len = sizeof(ar)/sizeof(ar[0]); //size in bytes of full array (eg: 20 bytes) divided by size of first element(eg: 4 byte) That gives us Number of elements (eg: 20/4 = 5 elements)
+	
+   for(int i = 0;i<len;i++) // i will go from index 0 to last index everytime increases by 1
+	{
+	printf("%d",array[i]);
+	}
+    return 0;
+}

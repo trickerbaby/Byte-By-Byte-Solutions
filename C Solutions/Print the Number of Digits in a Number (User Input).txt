@@ -1,0 +1,29 @@
+### Print the Number of Digits in a Number (User Input)
+
+
+#include <stdio.h>
+
+// Function to count and print the number of digits in a number
+void printNumberOfDigits(int num) {
+    int count = 0;
+    int temp = num;
+
+    // Count digits using a loop
+    while (temp != 0) {
+        temp /= 10;
+        ++count;
+    }
+
+    printf("Number of digits in %d is: %d\n", num, count);
+}
+
+int main() {
+    // Get user input for a number
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Print the number of digits with excitement
+    printNumberOfDigits(num);
+    return 0;
+}

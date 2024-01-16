@@ -1,0 +1,37 @@
+### Check if the Sum of All Factors is Equal to the Factorial of a Number (User Input)
+
+#include <stdio.h>
+
+// Function to calculate the factorial of a number
+int calculateFactorial(int num) {
+   int fact = 1;
+   for(int i = 1;i<=num;i++)
+	{
+		fact=fact*i;
+	}
+	return fact;
+}
+
+// Function to check if the sum of factors is equal to the factorial
+void checkSumFactorsEqualFactorial(int num) {
+    int sum = sumAllFactors(num);
+    int factorial = calculateFactorial(num);
+
+    if (sum == factorial) {
+        printf("The sum of factors is equal to the factorial! 🎉\n");
+    } else {
+        printf("The sum of factors is not equal to the factorial. 😕\n");
+    }
+}
+
+
+int main() {
+    // Get user input for a number
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Check the condition and have some fun with the result
+    checkSumFactorsEqualFactorial(num);
+    return 0;
+}

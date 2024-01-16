@@ -1,0 +1,20 @@
+### Print the Last Digit of a Number (User Input)
+
+#include <stdio.h>
+
+// Function to find and print the last digit of a number
+void printLastDigit(int num) {
+    int lastDigit = num % 10;
+    printf("The last digit of %d is: %d\n", num, lastDigit);
+}
+
+int main() {
+    // Get user input for a number
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Print the last digit with a sense of mystery
+    printLastDigit(num);
+    return 0;
+}

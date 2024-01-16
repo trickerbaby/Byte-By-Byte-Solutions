@@ -1,0 +1,43 @@
+### Two Sum Using Double Pointer
+```c
+#include <stdio.h>
+
+// Function to find and print pairs with a given sum in an array using double pointer
+void twoSumDoublePointer(int array[], int size, int targetSum) {
+        printf("\n");
+}
+
+int main() {
+    // Example array
+    int array[] = {2, 7, 4, 0, 9, 5, 1, 3};
+    int size = sizeof(array) / sizeof(array[0]);
+
+    // Get user input for the target sum
+    int targetSum;
+    printf("Enter the target sum: ");
+    scanf("%d", &targetSum);
+
+    // Find and print pairs with the target sum using double pointer
+   int start = 0;
+    int end = array[size - 1];
+
+    printf("Pairs with sum %d: ", targetSum);
+
+    while (start < end) {
+        int currentSum = array[start] + array[end];
+
+        if (currentSum == targetSum) {
+            printf("(%d, %d) ", array[start], array[end]);
+            ++start;
+            --end;
+        } else if (currentSum < targetSum) {
+            ++start;
+        } else {
+            --end;
+        }
+    }
+
+
+
+    return 0;
+}

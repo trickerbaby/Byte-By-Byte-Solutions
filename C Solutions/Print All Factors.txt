@@ -1,0 +1,25 @@
+### Print All Factors of a Number (User Input)
+
+#include <stdio.h>
+
+// Function to print all factors of a number
+void printAllFactors(int num) {
+    printf("Factors of %d: ", num);
+    for (int i = 1; i <= num; ++i) {
+        if (num % i == 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+}
+
+int main() {
+    // Get user input for a number
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Call the function and display the factors
+    printAllFactors(num);
+    return 0;
+}

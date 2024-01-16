@@ -1,0 +1,26 @@
+### Print Even Numbers from 1 to N (User Input)
+
+
+#include <stdio.h>
+
+// Function to print even numbers from 1 to N
+void printEvenNumbers1toN(int n) {
+    printf("Even numbers from 1 to %d: ", n);
+    for (int i = 1; i <= n; ++i) {
+        if (i % 2 == 0) {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+}
+
+int main() {
+    // Get user input for N
+    int n;
+    printf("Enter a number (N): ");
+    scanf("%d", &n);
+
+    // Call the function and enjoy the even sequence
+    printEvenNumbers1toN(n);
+    return 0;
+}

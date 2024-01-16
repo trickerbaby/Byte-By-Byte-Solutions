@@ -1,0 +1,34 @@
+### Two Sum Using Two Loops
+
+#include <stdio.h>
+
+// Function to find and print pairs with a given sum in an array
+void twoSum(int array[], int size, int targetSum) {
+    printf("Pairs with sum %d: ", targetSum);
+
+    for (int i = 0; i < size - 1; ++i) {
+        for (int j = i + 1; j < size; ++j) {
+            if (array[i] + array[j] == targetSum) {
+                printf("(%d, %d) ", array[i], array[j]);
+            }
+        }
+    }
+
+    printf("\n");
+}
+
+int main() {
+    // Example array
+    int array[] = {2, 7, 4, 0, 9, 5, 1, 3};
+    int size = sizeof(array) / sizeof(array[0]);
+
+    // Get user input for the target sum
+    int targetSum;
+    printf("Enter the target sum: ");
+    scanf("%d", &targetSum);
+
+    // Find and print pairs with the target sum
+    twoSum(array, size, targetSum);
+
+    return 0;
+}
